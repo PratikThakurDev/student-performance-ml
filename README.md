@@ -2,11 +2,15 @@
 
 A machine learning project that predicts a student's exam score based on academic, lifestyle, and environmental factors.
 
-The project includes exploratory data analysis, preprocessing, model comparison, model training, and prediction on new student data.
+The project includes exploratory data analysis, preprocessing, model comparison, model training, and an interactive prediction application built with Streamlit.
 
 ## Dataset
 
-The dataset contains 6,607 student records with 19 input features and one target variable, `Exam_Score`.
+This project uses the **Student Performance Factors** dataset from Kaggle.
+
+**Dataset source:** Lainguyn123 — Student Performance Factors
+
+The dataset contains **6,607 student records**, **19 input features**, and one target variable: `Exam_Score`.
 
 Example features include:
 
@@ -21,7 +25,13 @@ Example features include:
 - Parental involvement
 - Internet access
 
-The dataset also contains both numerical and categorical features, along with some missing categorical values.
+The dataset contains both numerical and categorical features, along with some missing categorical values.
+
+The dataset file is not included in this repository. After downloading `StudentPerformanceFactors.csv`, place it at:
+
+```text
+data/StudentPerformanceFactors.csv
+```
 
 ## Machine Learning Pipeline
 
@@ -40,8 +50,7 @@ Categorical features are processed using:
 
 ### Model
 
-The final prediction model is Linear Regression.
-
+The final prediction model is **Linear Regression**.
 
 ## Model Comparison
 
@@ -56,7 +65,6 @@ Four regression algorithms were compared using 5-fold cross-validation.
 
 Linear Regression was selected for the final pipeline based on the cross-validation results.
 
-
 ## Final Model Performance
 
 The final Linear Regression pipeline achieved:
@@ -69,6 +77,7 @@ The final Linear Regression pipeline achieved:
 
 ## Project Structure
 
+```text
 student-performance-ml/
 ├── analysis/
 │   ├── eda.py
@@ -80,5 +89,59 @@ student-performance-ml/
 ├── src/
 │   ├── train.py
 │   └── predict.py
+├── app.py
 ├── requirements.txt
 └── README.md
+```
+
+## Installation
+
+Clone the repository and install the required dependencies:
+
+```bash
+git clone 
+cd student-performance-ml
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+## Run the Application
+
+Start the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+Then open the local URL displayed by Streamlit in your browser.
+
+## Train the Model
+
+To retrain the model:
+
+```bash
+python3 src/train.py
+```
+
+The trained pipeline will be saved to:
+
+```text
+models/student_score_model.pkl
+```
+
+## Run the Analysis
+
+Exploratory data analysis:
+
+```bash
+python3 analysis/eda.py
+```
+
+Model comparison:
+
+```bash
+python3 analysis/model_comparison.py
+```
