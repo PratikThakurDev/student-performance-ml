@@ -4,6 +4,13 @@ A machine learning project that predicts a student's exam score based on academi
 
 The project includes exploratory data analysis, preprocessing, model comparison, model training, and an interactive prediction application built with Streamlit.
 
+## Live Demo
+
+Try the deployed application on Streamlit Community Cloud:
+
+[Student Performance Predictor - Live App]
+https://student-performance-ml-com3jy4wpybjgtmlqlctcx.streamlit.app/
+
 ## Dataset
 
 This project uses the **Student Performance Factors** dataset from Kaggle.
