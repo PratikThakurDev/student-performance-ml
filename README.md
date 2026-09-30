@@ -99,7 +99,7 @@ student-performance-ml/
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone 
+git clone https://github.com/PratikThakurDev/student-performance-ml.git
 cd student-performance-ml
 
 python3 -m venv .venv
